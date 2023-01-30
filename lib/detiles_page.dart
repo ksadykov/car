@@ -1,8 +1,11 @@
-import 'package:car_flutter/fonts.dart';
-import 'package:car_flutter/images.dart';
-import 'package:car_flutter/model/car_model.dart';
+import 'package:car_flutter/design/color.dart';
+import 'package:car_flutter/design/fonts.dart';
+import 'package:car_flutter/design/images.dart';
+import 'package:car_flutter/model/class_car_model.dart';
 import 'package:car_flutter/widgets/info_windget.dart';
 import 'package:flutter/material.dart';
+
+import 'widgets/widget_addremove.dart';
 
 class CarDetiles extends StatelessWidget {
   const CarDetiles({
@@ -71,7 +74,7 @@ class CarDetiles extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 27,
+            height: 15,
           ),
           Padding(
             padding: const EdgeInsets.all(17.0),
@@ -92,7 +95,7 @@ class CarDetiles extends StatelessWidget {
             ),
           ),
           Container(
-            margin: const EdgeInsets.symmetric(vertical: 20.0),
+            margin: const EdgeInsets.symmetric(vertical: 15.0),
             height: 95.0,
             child: ListView(
               scrollDirection: Axis.horizontal,
@@ -116,13 +119,24 @@ class CarDetiles extends StatelessWidget {
             child: Row(
               children: [
                 CircleAvatar(
-                  radius: 24,
+                  radius: 30,
+                  backgroundColor: Colors.blue,
+                  child: SizedBox(
+                    width: 90,
+                    height: 90,
+                    child: ClipOval(
+                      child: Image.asset(
+                        AppImages.avatar,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
                 ),
                 const SizedBox(
                   width: 11,
                 ),
-                Text(data.ownersName),
-                Spacer(),
+                const Text('Lorem Ipsum'),
+                const Spacer(),
                 IconButton(
                   onPressed: () {},
                   icon: Image.asset(AppImages.vector1),
@@ -133,7 +147,8 @@ class CarDetiles extends StatelessWidget {
                 ),
               ],
             ),
-          )
+          ),
+          WidgetAddRemove(),
         ],
       ),
     );

@@ -1,4 +1,4 @@
-import 'package:car_flutter/fonts.dart';
+import 'package:car_flutter/design/fonts.dart';
 import 'package:flutter/material.dart';
 
 class CustomChip extends StatelessWidget {
@@ -17,7 +17,7 @@ class CustomChip extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChoiceChip(
         onSelected: onSelected,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(3)),
         side: const BorderSide(
           width: 1,
           color: Color(0xff2B4C59),

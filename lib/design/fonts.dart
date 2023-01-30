@@ -1,5 +1,6 @@
-import 'package:car_flutter/color.dart';
 import 'package:flutter/material.dart';
+
+import 'color.dart';
 
 abstract class AppFonts {
   static const TextStyle w400h49 = TextStyle(
