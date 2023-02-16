@@ -11,6 +11,7 @@ class CarProvider extends ChangeNotifier {
 
   void addtoWastebasket({required CarModel model}) {
     wastebasket.add(model);
+    wastebasket = wastebasket.toSet().toList();
     notifyListeners();
   }
 

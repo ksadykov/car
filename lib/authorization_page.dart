@@ -58,21 +58,23 @@ class Authorization extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 34),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.green,
-                    textStyle: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 80,
-                        fontStyle: FontStyle.normal),
+                Center(
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.green,
+                      textStyle: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontStyle: FontStyle.italic),
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const PageThree()));
+                    },
+                    child: const Text('Log In'),
                   ),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const PageThree()));
-                  },
-                  child: const Text('Log In'),
                 ),
               ],
             ),

@@ -57,7 +57,7 @@ class _PageThreeState extends State<PageThree> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => Wastebasket(),
+                  builder: (context) =>  Wastebasket(),
                 ),
               );
             },
